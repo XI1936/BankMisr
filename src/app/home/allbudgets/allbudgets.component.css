@@ -54,3 +54,9 @@ body{
     text-align: center;
     justify-content: center;
   }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    fill: #f00;
+  }

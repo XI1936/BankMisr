@@ -50,3 +50,8 @@ body {
     color: #080101de;
 }
 #page-content-wrapper{background-color:whitesmoke;}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}

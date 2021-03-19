@@ -1,6 +1,7 @@
 <body>
     
     <h1 style="margin-left: 10px; padding: 5px;">Your all Budgets </h1>
+ 
     <div class="spinIcon" *ngIf="isLoaded">
 
         <div class="spinner-border" role="status">
@@ -12,7 +13,7 @@
           <div class="card">
             <h2> {{budget.name}} </h2>
             <button *ngIf="!budget.visible" (click)="showDetail(i)" class="btn btn-secondary showButton">
-                Show more Details...
+                Show more Details    <img src="../../../assets/icons/expand-down.svg" alt="icon name" class="icon">
             </button>
             <div *ngIf="budget.visible"> 
                 <h4>Currency : ( {{budget.currency_format.currency_symbol}} ) </h4>
