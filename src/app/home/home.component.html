@@ -4,9 +4,9 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">BankMisr </div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light"> All Budgets</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Add Account</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+        <a class="list-group-item list-group-item-action bg-light" (click)="changeSideNav()"> All Budgets</a>
+        <a routerLink="allbudgets"  class="list-group-item list-group-item-action bg-light">Add Account</a>
+        <a routerLink="home" class="list-group-item list-group-item-action bg-light">Events</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -28,11 +28,11 @@
         </div>
       </nav>
 
-      <div class="container-fluid">
-       
-        <p>Main content</p>
+      <!-- <div  *ngIf="isAllBuget">
+        <app-allbudgets></app-allbudgets>
         
-      </div>
+      </div> -->
+      <router-outlet></router-outlet>
     </div>
     <!-- /#page-content-wrapper -->
 

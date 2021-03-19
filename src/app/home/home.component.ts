@@ -1,3 +1,4 @@
+import { typeWithParameters } from '@angular/compiler/src/render3/util';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  isAllBuget:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeSideNav(){
+    this.isAllBuget=!this.isAllBuget;
   }
 
 }
