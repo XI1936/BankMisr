@@ -1,1 +1,26 @@
-<p>add-account works!</p>
+<form class="formContainer">
+     
+        <legend>Please fill below details to open an Account.</legend>
+        <div class="input-group input-group-lg formItem">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Name of the account</span>
+            <input type="text" class="form-control"  >
+          </div>
+
+        <div class="input-group input-group-lg formItem">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Opening account Balance</span>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="input-group showButton formItem">
+            <span class="input-group-text">Please Select type of the account :
+            <select class="btn btn-light"   >
+                <option selected> Select</option>
+                <option *ngFor="let val of accTypeArr" value={{val}}>
+                    {{val}}
+                </option> 
+              </select>
+            </span>
+          </div>
+           <button type="submit" class="btn btn-outline-primary formItem">Submit</button>
+       
+</form>

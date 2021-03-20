@@ -1,0 +1,24 @@
+.formContainer{
+    padding: 25px;
+}
+
+.formItem{
+    padding: 10px;
+}
+.btn-light {
+    color: #212529;
+    background-color: #ffffff;
+    border-color: #313c46;
+    margin-left: 3px;
+    width: 500px;
+}
+
+.submitcontainer{
+    display: flex;
+    align-items: center;
+}
+
+.btn-outline-primary {
+    margin-left: 10px;
+}
+ 

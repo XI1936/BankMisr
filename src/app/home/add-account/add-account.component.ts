@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-account.component.css']
 })
 export class AddAccountComponent implements OnInit {
-
+  accTypeArr=[ "checking", "savings", "creditCard", "cash", "lineOfCredit", "otherAsset", "otherLiability" ];
   constructor() { }
 
   ngOnInit(): void {
