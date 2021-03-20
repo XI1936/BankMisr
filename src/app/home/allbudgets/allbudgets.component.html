@@ -13,7 +13,7 @@
           <div class="card">
             <h2> {{budget.name}} </h2>
             <button *ngIf="!budget.visible" (click)="showDetail(i)" class="btn showButton">
-                Show more Details    <img src="../../../assets/icons/expand-down.svg" alt="icon name" class="icon">
+                Show more Details    <img src="../../../assets/icons/fullscreen-enter.svg" alt="icon name" class="icon">
             </button>
             <div *ngIf="budget.visible"> 
                 <h4>Currency : ( {{budget.currency_format.currency_symbol}} ) </h4>

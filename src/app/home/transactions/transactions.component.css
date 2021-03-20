@@ -1,0 +1,23 @@
+.selecInput{
+    flex: auto;
+    margin-right: 4px;
+    padding: 10px;
+}
+ 
+.formItem{
+    padding: 10px;
+}
+
+.showButton{
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 90%;
+}
+
+.spinIcon{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }

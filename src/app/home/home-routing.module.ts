@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { CommonModule } from '@angular/common';
 import { AddAccountComponent } from './add-account/add-account.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 const homeRoutes: Routes = [
   {
     path: 'home',
@@ -21,6 +22,10 @@ const homeRoutes: Routes = [
       {
         path: 'addaccount',
         component: AddAccountComponent
+      },
+      {
+        path: 'transactions',
+        component: TransactionsComponent
       },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]

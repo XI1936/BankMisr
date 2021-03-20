@@ -1,0 +1,52 @@
+
+<legend style="padding-top: 20px;padding-left: 20px;">Please fill below details to see payee transactions.</legend>
+<div class="input-group showButton formItem">
+
+    <div class="input-group-text input-group-lg selecInput">Please Select budget:
+        <select class="btn btn-light selecInput" required ngModel name="budgetId" #budgetId="ngModel" (change)="selectedBudget($event.target.value)">
+            <option *ngFor="let val of budgetNameArr" value={{val.key}}>
+                {{val.value}}
+            </option> 
+        </select>
+    </div>
+    
+    
+    <div class="input-group-text selecInput">Please Select the account :
+        <select class="btn btn-light selecInput" required ngModel name="accType" #accType="ngModel" (change)="selectedAccount($event.target.value)">
+            <option *ngFor="let val of accNames" value={{val.key}}>
+                {{val.value}}
+            </option> 
+        </select>
+        
+    </div>
+</div>
+
+
+<table class="table table-striped showButton">
+    <thead>
+      <tr>
+        <th>Account Name</th>
+        <th>Category</th>
+        <th>Payee Name</th>
+        <th>Ammount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of transactionArr">
+        <td>{{item.account_name}}</td>
+        <td>{{item.category_name}}</td>
+        <td>{{item.payee_name}}</td>
+        <td>{{item.amount}}</td>
+        <td>{{item.date}}</td>
+      </tr>
+    </tbody>
+</table>
+
+<div class="spinIcon" *ngIf="isLoaded">
+
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<p *ngIf="transactionArr.length==0 && !isLoaded" style="padding: 10px; text-align: center;">No records Found</p>

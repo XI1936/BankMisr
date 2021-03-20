@@ -1,3 +1,4 @@
+
  <div class="input-group showButton">
     <span class="input-group-text">Please Select a Budget :
     <select class="btn btn-light"  (change)="selectedBudget($event.target.value)">
@@ -8,6 +9,9 @@
       </select>
     </span>
   </div>
+
+<legend style="padding-top: 20px;padding-left: 20px;">List of accounts under:  <span style="color: lightskyblue; font-weight: bolder;">{{currentBudgetName}} </span> </legend>
+
   <table class="table table-striped showButton">
     <thead>
       <tr>

@@ -5,9 +5,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AddAccountComponent } from './add-account/add-account.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 @NgModule({
-  declarations: [AllbudgetsComponent, AccountsComponent, AddAccountComponent],
+  declarations: [AllbudgetsComponent, AccountsComponent, AddAccountComponent, TransactionsComponent],
   imports: [HomeRoutingModule,  CommonModule, FormsModule, ReactiveFormsModule],
   providers: []
 })

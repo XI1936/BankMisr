@@ -12,6 +12,7 @@ export class AccountsComponent implements OnInit {
   budgetNameArr:any=[];
   accountArr:any=[];
   isLoaded:boolean = false;
+  currentBudgetName='';
   ngOnInit(): void {
     this.appSevice.getAllbudgets().subscribe((data=>{
       let budget=data['data'].budgets;
@@ -23,6 +24,9 @@ export class AccountsComponent implements OnInit {
 
   selectedBudget(value){
     this.isLoaded=true;
+    this.budgetNameArr.forEach(element => {
+      if(value==element.key) this.currentBudgetName=element.value;
+    });
     this.appSevice.getBudgetAccounts(value).subscribe((data)=>{
       this.accountArr=data['data'].accounts;
       this.accountArr.sort((a,b)=>{

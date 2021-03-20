@@ -31,15 +31,14 @@ export class AppService {
   }
 
   createAccount(userData,budgetId){
-  // {
-  // "account": {
-  //   "name": "saif",
-  //   "type": "checking",
-  //   "balance": 0
-  //      } 
-  // }
   const url=this.baseURL+'budgets/' +budgetId+ '/accounts';
   return this.http.post(url,userData,{ responseType: 'blob' as 'json', observe: 'response' });
 
   }
+
+  getPayeeTranx(budgetId,accId){
+    const url=this.baseURL+'budgets/'+budgetId+'/accounts/'+accId+'/transactions';
+    return this.http.get(url);
+  }
+  ///budgets/{budget_id}/accounts/{account_id}/transactions
 }
