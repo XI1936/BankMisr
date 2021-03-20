@@ -1,0 +1,20 @@
+.showButton{
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+  width: 90%;
+  }
+
+  .btn-light {
+    color: #212529;
+    background-color: #ffffff;
+    border-color: #313c46;
+    margin-left: 23px;
+}
+
+.spinIcon{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
