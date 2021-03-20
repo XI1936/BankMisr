@@ -12,7 +12,7 @@
         <div class="column" *ngFor="let budget of budgetArr; index as i">
           <div class="card">
             <h2> {{budget.name}} </h2>
-            <button *ngIf="!budget.visible" (click)="showDetail(i)" class="btn btn-secondary showButton">
+            <button *ngIf="!budget.visible" (click)="showDetail(i)" class="btn showButton">
                 Show more Details    <img src="../../../assets/icons/expand-down.svg" alt="icon name" class="icon">
             </button>
             <div *ngIf="budget.visible"> 

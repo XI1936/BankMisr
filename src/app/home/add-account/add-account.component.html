@@ -1,26 +1,61 @@
-<form class="formContainer">
+<form class="formContainer" #f="ngForm" ngForm (ngSubmit)="onSubmit(f.value)">
      
         <legend>Please fill below details to open an Account.</legend>
         <div class="input-group input-group-lg formItem">
             <span class="input-group-text" id="inputGroup-sizing-lg">Name of the account</span>
-            <input type="text" class="form-control"  >
+            <input type="text" class="form-control" required ngModel name="accName" #accName="ngModel">
+            <div  *ngIf="!accName.valid && accName.touched" class="invalid-feedback d-block">
+              Name is required. 
+            </div>
           </div>
 
         <div class="input-group input-group-lg formItem">
             <span class="input-group-text" id="inputGroup-sizing-lg">Opening account Balance</span>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" required ngModel name="accBalance" #accBalance="ngModel">
+            <div  *ngIf="!accBalance.valid && accBalance.touched" class="invalid-feedback d-block">
+              Bakance ammount is required. 
+            </div>
         </div>
 
         <div class="input-group showButton formItem">
-            <span class="input-group-text">Please Select type of the account :
-            <select class="btn btn-light"   >
-                <option selected> Select</option>
+            <div class="input-group-text selecInput">Please Select type of the account :
+            <select class="btn btn-light selecInput" required ngModel name="accType" #accType="ngModel">
                 <option *ngFor="let val of accTypeArr" value={{val}}>
                     {{val}}
                 </option> 
               </select>
-            </span>
+              
+            </div>
+            <div class="input-group-text input-group-lg selecInput">Please Select budget:
+              <select class="btn btn-light selecInput" required ngModel name="budgetId" #budgetId="ngModel">
+                  <option *ngFor="let val of budgetNameArr" value={{val.key}}>
+                      {{val.value}}
+                  </option> 
+                </select>
+              </div>
+              <div  *ngIf="!accType.valid && accType.touched" class="invalid-feedback d-block">
+                Account type is required. 
+              </div>
+
+              <div  *ngIf="!budgetId.valid && budgetId.touched" class="invalid-feedback d-block" style="text-align: right;">
+                Budget  is required. 
+              </div>
           </div>
-           <button type="submit" class="btn btn-outline-primary formItem">Submit</button>
+           <button type="submit" class="btn btn-primary formItem" [disabled]="!f.valid">Create Account
+
+            <span class="spinner-border" role="status" *ngIf="isLoaded">
+                  <span class="sr-only">Loading...</span>
+              </span>
        
+           </button>
 </form>
+
+<div id="popup1" class="overlay" *ngIf="isSaved" >
+  <div class="popup">
+    <h2>Thank you ! </h2>
+    <a class="close" (click)="closePop()">&times;</a>
+    <div class="content">
+     I will get back to you shortly.
+    </div>
+  </div>
+</div>
