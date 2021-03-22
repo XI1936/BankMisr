@@ -1,4 +1,8 @@
 # Banque Misr
+## See the Application Live Here: https://saifmoney.web.app/login
+## Use below credentials to login </br>
+*username: saif@gmail.com* </br>
+*password: 123456*
 
 ## Development server
 >Clone the project </br>
