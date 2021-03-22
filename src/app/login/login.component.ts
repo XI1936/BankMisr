@@ -14,14 +14,20 @@ export class LoginComponent implements OnInit {
   isLoaded:boolean=false;
   isInvalid:boolean=false;
   ngOnInit(): void {}
+  user;
   login() {
     console.log(this.username);
     console.log(this.password);
-    let data = {
+     this.user = {
       username: this.username,
       password: this.password,
     };
-    this.router.navigate(["home"]);
+    if(this.username=="saif@gmail.com" && this.password=="123456")
+    {localStorage.setItem('SeesionUser',JSON.stringify(this.user))  
+    this.router.navigate(["home"]);}
+    else{
+      this.isInvalid=true;
+    }
     // this.appService.submitLoginData(data).subscribe(
     //   (response) => {
     //     this.router.navigate(['/home']);
@@ -30,6 +36,7 @@ export class LoginComponent implements OnInit {
     //     this.isInvalid=true;
     //   }
     // );
+    
   }
   email(username) {
     this.username = username.viewModel;

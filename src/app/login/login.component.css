@@ -1,11 +1,21 @@
- 
+ main{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: url(../../assets/icons/compLogo.svg) lightblue;
+   background-size: 250px 200px; /* Height: auto is to keep aspect ratio */
+   background-repeat: repeat;
+   /* opacity: 0.3; */
+ }
 .container {
-  margin-top: 10%;
+  margin-top: 100px;
   width: 500px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.3),
     inset 0 1px rgba(255, 255, 255, 1), inset 0 -3px 2px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  background: linear-gradient(#eeefef, #ffffff 10%);
+  /* background: linear-gradient(#eeefef, #ffffff 10%); */
+  opacity: 1;
 }
 
 /* style the container */
